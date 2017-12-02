@@ -1,7 +1,7 @@
 (function() {
     function put(entry) {
         var xhr = new XMLHttpRequest();
-	var bin = ""; //use your own bin ID
+	      var bin = ""; //use your own bin ID
         xhr.open("PUT", "https://api.myjson.com/bins/" + bin);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = function() {
@@ -17,13 +17,13 @@
     }
 
     var entries = document.querySelectorAll(".qna-result-question-uin, .UIN");
-    var entryArray = Array.prototype.slice.call(entries);    
+    var entryArray = Array.prototype.slice.call(entries);
 
     entryArray
     .forEach(function(item, index) {
         entryArray[index].innerText = entryArray[index].innerText.replace(/[^\w]/gi,"");
     });
-    
+
     var arraystr = entryArray.map(function(element) {
         return element.innerText;
     });
