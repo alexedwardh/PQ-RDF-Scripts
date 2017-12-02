@@ -1,12 +1,12 @@
 (function () {
-	var storageId = ""; //use your own bin ID
-	retrieveStorage(storageId, process);
+	var bin = ""; //use your own bin ID
+	retrieveStorage(bin, process);
 
 	function retrieveStorage(id, callback) {
-		var myJsonBaseUrl = "https://api.myjson.com/bins/";
-		var storageUrl = myJsonBaseUrl + id;
-		
-		get(storageUrl, callback);
+		var JsonUrl = "https://api.myjson.com/bins/";
+		var binUrl = JsonUrl + id;
+
+		get(binUrl, callback);
 	}
 
 	function process(json) {
